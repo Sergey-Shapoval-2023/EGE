@@ -54,6 +54,7 @@ def game2(heap, moves, to):
         return 0
     h = [game2(heap + 1, moves + 1, to),
          game2(heap * 2, moves + 1, to)]
+    #print (h)
     # all(массив_значений) - возвращает true, если все значения в списке истинны.
     return any(h) if (moves + 1) % 2 == to % 2 else all(h)
 
@@ -64,3 +65,5 @@ def game2(heap, moves, to):
 print(f'19: {min(s for s in range(1, 106) if not game(s, 0, 1) and game(s, 0, 2))}')
 print(f'20: {[s for s in range(1, 106) if not game2(s, 0, 1) and game2(s, 0, 3)]}')
 print(f'21: {[s for s in range(1, 106) if not game2(s, 0, 2) and game2(s, 0, 4)]}')
+
+print ([s for s in range(1, 106) if not game(s, 0, 1) and game(s, 0, 2)])

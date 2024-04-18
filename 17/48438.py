@@ -1,11 +1,15 @@
 # map(функция, список) - применяет функцию к каждому элементу списка
 nums = list(map(int, open('48438.txt').readlines()))
+nums_before_map=open('48438.txt').readlines()
 
 min_num = 10001
 for num in nums:
     if abs(num) % 10 == 7:
         min_num = min(min_num, num)
 
+print (nums)
+print (len(nums))
+print (nums_before_map)
 """
 a b xor
 0 0 0
